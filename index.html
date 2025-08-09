@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曲荣范 - 资深培训领域从业者</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-purple': '#1a0b2e',
+                        'purple-dark': '#2d1b4e',
+                        'accent-green': '#00ff88',
+                        'accent-red': '#ff4757'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a0b2e 0%, #2d1b4e 50%, #1a0b2e 100%);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="gradient-bg text-white min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-accent-green">
+                    <i class="fas fa-user-graduate mr-2"></i>
+                    曲荣范
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-accent-green transition-colors">关于我</a>
+                    <a href="#experience" class="hover:text-accent-green transition-colors">项目履历</a>
+                    <a href="#social" class="hover:text-accent-green transition-colors">社交媒体</a>
+                    <a href="#contact" class="hover:text-accent-green transition-colors">联系我</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden glass-effect">
+            <div class="container mx-auto px-4 py-4 space-y-4">
+                <a href="#about" class="block hover:text-accent-green transition-colors">关于我</a>
+                <a href="#experience" class="block hover:text-accent-green transition-colors">项目履历</a>
+                <a href="#social" class="block hover:text-accent-green transition-colors">社交媒体</a>
+                <a href="#contact" class="block hover:text-accent-green transition-colors">联系我</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="https://picsum.photos/1920/1080?random=1" alt="背景" class="w-full h-full object-cover opacity-20">
+            </div>
+            <div class="relative z-10 text-center container mx-auto px-4">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-accent-green text-shadow fade-in">
+                    专业成长
+                </h1>
+                <h2 class="text-2xl md:text-4xl mb-8 text-white text-shadow fade-in">
+                    培训领域的创新者
+                </h2>
+                <p class="text-lg md:text-xl mb-12 max-w-3xl mx-auto text-gray-300 fade-in">
+                    拥有丰富的课程开发、项目管理及行业研究经验，深耕培训行业多年，曾服务于华为、腾讯、平安、国网等知名企业及机构。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+                    <a href="#experience" class="bg-accent-green text-deep-purple px-8 py-4 rounded-lg font-bold hover:bg-green-400 transition-colors hover-scale">
+                        <i class="fas fa-briefcase mr-2"></i>
+                        查看履历
+                    </a>
+                    <a href="#social" class="border-2 border-accent-green text-accent-green px-8 py-4 rounded-lg font-bold hover:bg-accent-green hover:text-deep-purple transition-colors hover-scale">
+                        <i class="fas fa-share-alt mr-2"></i>
+                        社交媒体
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于我 Section -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="fade-in">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-8 text-accent-green">
+                            关于我
+                        </h2>
+                        <div class="space-y-6 text-lg">
+                            <p class="text-gray-300">
+                                曲荣范 | 资深培训领域从业者，拥有丰富的课程开发、项目管理及行业研究经验，深耕培训行业多年。
+                            </p>
+                            <p class="text-gray-300">
+                                曾服务于华为、腾讯、平安、国网等知名企业及机构。具备扎实的项目落地能力，从需求调研、方案定制到课程研发、成果验收全流程把控经验丰富。
+                            </p>
+                            <p class="text-gray-300">
+                                持有《6Ds》工作坊认证、影刀RPA初级工程师、Datawhale AI Agent工程师等多项专业认证，具备AI技术与培训领域结合的跨界能力。
+                            </p>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-2xl font-bold mb-4 text-white">专业认证</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-purple-dark px-4 py-2 rounded-full text-sm">
+                                    <i class="fas fa-certificate mr-2"></i>6Ds工作坊认证
+                                </span>
+                                <span class="bg-purple-dark px-4 py-2 rounded-full text-sm">
+                                    <i class="fas fa-robot mr-2"></i>影刀RPA初级工程师
+                                </span>
+                                <span class="bg-purple-dark px-4 py-2 rounded-full text-sm">
+                                    <i class="fas fa-brain mr-2"></i>Datawhale AI Agent工程师
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fade-in flex flex-col gap-6">
+                        <img src="https://picsum.photos/600/800?random=2" alt="个人照片" class="w-full rounded-2xl shadow-2xl hover-scale mb-4">
+                        <img src="https://picsum.photos/600/200?random=11" alt="关于我配图" class="w-full rounded-xl object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目履历 Section -->
+        <section id="experience" class="py-20 bg-purple-dark">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-accent-green fade-in">
+                    项目履历
+                </h2>
+                <img src="https://picsum.photos/1200/300?random=12" alt="项目履历配图" class="w-full rounded-xl object-cover mb-10">
+                
+                <!-- 课程开发 -->
+                <div class="mb-16 fade-in">
+                    <h3 class="text-3xl font-bold mb-8 text-white flex items-center">
+                        <i class="fas fa-graduation-cap mr-4 text-accent-green"></i>
+                        课程开发
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="glass-effect p-6 rounded-xl hover-scale flex flex-col gap-4">
+                            <img src="https://picsum.photos/400/200?random=21" alt="课程开发配图1" class="w-full rounded-lg object-cover">
+                            <div class="text-accent-green text-sm mb-2">2021.12</div>
+                            <h4 class="text-xl font-bold mb-3">华为课程开发项目</h4>
+                            <p class="text-gray-300">负责华为音频品类、平板、显示器的课件制作，助力提升内部培训效果。</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-xl hover-scale flex flex-col gap-4">
+                            <img src="https://picsum.photos/400/200?random=22" alt="课程开发配图2" class="w-full rounded-lg object-cover">
+                            <div class="text-accent-green text-sm mb-2">2022.3</div>
+                            <h4 class="text-xl font-bold mb-3">腾讯金融云课程开发</h4>
+                            <p class="text-gray-300">承担供应链金融与银行数字化转型课程的开发工作，为业务推广提供培训支持。</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-xl hover-scale flex flex-col gap-4">
+                            <img src="https://picsum.photos/400/200?random=23" alt="课程开发配图3" class="w-full rounded-lg object-cover">
+                            <div class="text-accent-green text-sm mb-2">2024.7</div>
+                            <h4 class="text-xl font-bold mb-3">平安《新价值文化》微课开发</h4>
+                            <p class="text-gray-300">担任项目经理、开发经理，通过创新课程设计传播企业文化。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 咨询服务 -->
+                <div class="mb-16 fade-in">
+                    <h3 class="text-3xl font-bold mb-8 text-white flex items-center">
+                        <i class="fas fa-handshake mr-4 text-accent-green"></i>
+                        咨询服务
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="glass-effect p-6 rounded-xl hover-scale flex flex-col gap-4">
+                            <img src="https://picsum.photos/400/200?random=24" alt="咨询服务配图1" class="w-full rounded-lg object-cover">
+                            <div class="text-accent-green text-sm mb-2">2021.10</div>
+                            <h4 class="text-xl font-bold mb-3">国网湖南大案例开发</h4>
+                            <p class="text-gray-300">负责案例撰写及编写支持，助力电力行业经验总结与推广。</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-xl hover-scale flex flex-col gap-4">
+                            <img src="https://picsum.photos/400/200?random=25" alt="咨询服务配图2" class="w-full rounded-lg object-cover">
+                            <div class="text-accent-green text-sm mb-2">2022.9</div>
+                            <h4 class="text-xl font-bold mb-3">国网湖南百千万党建人才开发</h4>
+                            <p class="text-gray-300">负责调研报告撰写，为党建人才培养提供数据支持和决策依据。</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-xl hover-scale flex flex-col gap-4">
+                            <img src="https://picsum.photos/400/200?random=26" alt="咨询服务配图3" class="w-full rounded-lg object-cover">
+                            <div class="text-accent-green text-sm mb-2">2022.10</div>
+                            <h4 class="text-xl font-bold mb-3">国网湖南精准化人才培养体系</h4>
+                            <p class="text-gray-300">负责评估报告撰写和课题论文研究，推动人才培养体系完善。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 教学研究与行业报告 -->
+                <div class="mb-16 fade-in">
+                    <h3 class="text-3xl font-bold mb-8 text-white flex items-center">
+                        <i class="fas fa-chart-line mr-4 text-accent-green"></i>
+                        教学研究与行业报告
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="glass-effect p-6 rounded-xl hover-scale flex flex-col gap-4">
+                            <img src="https://picsum.photos/400/200?random=27" alt="行业报告配图1" class="w-full rounded-lg object-cover">
+                            <h4 class="text-xl font-bold mb-3">《2022 培训行业发展观察报告》</h4>
+                            <p class="text-gray-300">参与撰写，为行业趋势研究提供参考。</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-xl hover-scale flex flex-col gap-4">
+                            <img src="https://picsum.photos/400/200?random=28" alt="行业报告配图2" class="w-full rounded-lg object-cover">
+                            <h4 class="text-xl font-bold mb-3">《2023 年职业培训师行业发展调研报告》</h4>
+                            <p class="text-gray-300">独立撰写，全面负责规划、调研、数据整理、输出及宣传推广，引发行业广泛关注。</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-xl hover-scale flex flex-col gap-4">
+                            <img src="https://picsum.photos/400/200?random=29" alt="行业报告配图3" class="w-full rounded-lg object-cover">
+                            <h4 class="text-xl font-bold mb-3">《磨课技术标准7.0》</h4>
+                            <p class="text-gray-300">参与撰写，为磨课工作提供标准化指导。</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-xl hover-scale flex flex-col gap-4">
+                            <img src="https://picsum.photos/400/200?random=30" alt="行业报告配图4" class="w-full rounded-lg object-cover">
+                            <h4 class="text-xl font-bold mb-3">《磨课宝典》书籍撰稿人</h4>
+                            <p class="text-gray-300">分享磨课经验与技巧。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目与工作实践 -->
+                <div class="fade-in">
+                    <h3 class="text-3xl font-bold mb-8 text-white flex items-center">
+                        <i class="fas fa-briefcase mr-4 text-accent-green"></i>
+                        项目与工作实践
+                    </h3>
+                    <div class="space-y-8">
+                        <div class="glass-effect p-8 rounded-xl hover-scale flex flex-col gap-4">
+                            <img src="https://picsum.photos/600/200?random=31" alt="项目实践配图1" class="w-full rounded-lg object-cover">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h4 class="text-xl font-bold">深圳课匠堂教育科技有限公司</h4>
+                                <span class="text-accent-green text-sm">2021.7~2022.5</span>
+                            </div>
+                            <div class="text-gray-300 mb-2">项目顾问</div>
+                            <p class="text-gray-300">定制项目方案支持机构讲标，制定调研方案并撰写各类报告，独立开发课程资料包，作为汇报人员参与项目结题验收获客户认可。</p>
+                        </div>
+                        <div class="glass-effect p-8 rounded-xl hover-scale flex flex-col gap-4">
+                            <img src="https://picsum.photos/600/200?random=32" alt="项目实践配图2" class="w-full rounded-lg object-cover">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h4 class="text-xl font-bold">深圳课匠堂教育科技有限公司</h4>
+                                <span class="text-accent-green text-sm">2022.6~2023.12</span>
+                            </div>
+                            <div class="text-gray-300 mb-2">研发经理</div>
+                            <p class="text-gray-300">统筹课程开发全流程，独立开发并迭代党课《燎原》《灯塔》、通用管理课程《破局者》、销售类课程《影响力销售》等系列课程，提升课程品质。</p>
+                        </div>
+                        <div class="glass-effect p-8 rounded-xl hover-scale flex flex-col gap-4">
+                            <img src="https://picsum.photos/600/200?random=33" alt="项目实践配图3" class="w-full rounded-lg object-cover">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h4 class="text-xl font-bold">深圳市极课文化科技有限公司</h4>
+                                <span class="text-accent-green text-sm">2024.1~2025.1</span>
+                            </div>
+                            <div class="text-gray-300 mb-2">产品经理</div>
+                            <p class="text-gray-300">整合多部门资源负责课程全流程运营，主导课程研发与讲师团队打磨，制定推广策略并跟进商机转化，助力课程销售业绩增长。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 社交媒体 Section -->
+        <section id="social" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-accent-green fade-in">
+                    社交媒体
+                </h2>
+                <img src="https://picsum.photos/1200/300?random=13" alt="社交媒体配图" class="w-full rounded-xl object-cover mb-10">
+                <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                    <div class="glass-effect p-8 rounded-xl text-center hover-scale fade-in">
+                        <div class="text-6xl mb-6 text-accent-red">
+                            <i class="fab fa-weixin"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">公众号</h3>
+                        <p class="text-xl text-accent-green mb-4">职场小白学AI</p>
+                        <p class="text-gray-300">分享AI技术应用与职场发展经验，助力职场新人快速成长。</p>
+                        <a href="https://mp.weixin.qq.com/cgi-bin/home?t=home/index&lang=zh_CN&token=574796866" target="_blank" class="inline-block mt-6 bg-accent-green text-deep-purple px-6 py-3 rounded-lg font-bold hover:bg-green-400 transition-colors">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            关注公众号
+                        </a>
+                    </div>
+                    <div class="glass-effect p-8 rounded-xl text-center hover-scale fade-in">
+                        <div class="text-6xl mb-6 text-accent-red">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">小红书</h3>
+                        <p class="text-xl text-accent-green mb-4">AI+培训产品经理小凡子</p>
+                        <p class="text-gray-300">分享AI产品经理的日常工作和培训行业的最新动态。</p>
+                        <a href="https://www.xiaohongshu.com/user/profile/65feaef5000000000600f59f" target="_blank" class="inline-block mt-6 bg-accent-green text-deep-purple px-6 py-3 rounded-lg font-bold hover:bg-green-400 transition-colors">
+                            <i class="fas fa-external-link-alt mr-2"></i>
+                            关注小红书
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系我 Section -->
+        <section id="contact" class="py-20 bg-purple-dark">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center text-accent-green fade-in">
+                    联系我
+                </h2>
+                <div class="max-w-2xl mx-auto text-center fade-in">
+                    <p class="text-xl text-gray-300 mb-8">
+                        如果您对培训行业、课程开发或AI技术应用感兴趣，欢迎与我交流合作。
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="glass-effect p-6 rounded-xl hover-scale">
+                            <div class="text-4xl mb-4 text-accent-green">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">邮箱</h3>
+                            <p class="text-gray-300">753067412@qq.com</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-xl hover-scale">
+                            <div class="text-4xl mb-4 text-accent-green flex justify-center">
+                                <img src="wechat_qr.jpg" alt="微信二维码" class="w-24 h-24 object-contain rounded-lg border-2 border-accent-green mx-auto">
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">微信</h3>
+                            <p class="text-gray-300">扫码添加微信</p>
+                        </div>
+                        <div class="glass-effect p-6 rounded-xl hover-scale">
+                            <div class="text-4xl mb-4 text-accent-green">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">地址</h3>
+                            <p class="text-gray-300">深圳市南山区南头街道红花园社区47号702</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="py-8 text-center text-gray-400">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 曲荣范. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 滚动动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html> 
